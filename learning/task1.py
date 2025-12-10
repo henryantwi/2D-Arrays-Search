@@ -1,10 +1,3 @@
-
-
-# length(our_mtr) = 3
-# n < len(our_mtr)
-# range(len(our_mtr)) ie. range(3)( -> (0, 1, 2)
-
-
 def diagonal_sum(mtr: list[list[int]]) -> int:
     total: int = 0
     for i in range(len(mtr)):

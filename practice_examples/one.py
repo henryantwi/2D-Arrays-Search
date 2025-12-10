@@ -1,16 +1,18 @@
+def linear_search(arr, x):
+    step = 0
+
+    for i in range(len(arr)):
+        if arr[i] == x:
+            return i, step
+        else:
+            step += 1
+    return -1, step
 
 
+array_100 = list(range(1, 101))
+our_target = 42
 
-# ============================================
-# COMPLEXITY CHEAT SHEET
-# ============================================
-
-print("\n\n=== COMPLEXITY CHEAT SHEET ===\n")
-print("TIME COMPLEXITY (How long does it take?):")
-print("  Linear Search:  O(n) - checks every item")
-print("  Binary Search:  O(log n) - cuts search in half each time")
-print("  Diagonal Sum:   O(n) - looks at n diagonal elements")
-print("\nSPACE COMPLEXITY (How much memory?):")
-print("  All our functions: O(1) - only use a few variables")
-print("\nO(1) < O(log n) < O(n) < O(n²)")
-print("faster ←                   → slower")
+index, steps = linear_search(array_100, our_target)
+print(f"Linear Search for {our_target}:")
+print(f"  Found at index: {index}")
+print(f"  Steps: {steps}")
